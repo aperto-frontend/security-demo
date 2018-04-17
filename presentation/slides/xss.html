@@ -1,0 +1,50 @@
+<section>
+    <div class="slide is-intro">
+        <div class="intro">
+            <h1 class="intro__headline">XSS</h1>
+            <p class="intro__subline">Cross Site Scripting</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="slide is-intro">
+        <div class="intro">
+            <h1 class="intro__headline">Form</h1>
+            <pre class="html5" style="box-shadow: none;">&lt;form action=&quot;./create-link&quot; method=&quot;post&quot;&gt;
+<br>  &lt;label for=&quot;image&quot;&gt;Image source&lt;/label&gt;
+<br>  &lt;input type=&quot;text&quot; id=&quot;image&quot; name=&quot;image-source&quot; /&gt;
+<br>  &lt;button&gt;Submit&lt;/button&gt;
+<br>&lt;/form&gt;
+            </pre>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="slide is-intro">
+        <div class="intro">
+            <h1 class="intro__headline">Template</h1>
+            <pre class="html5" style="box-shadow: none;">&lt;img src=&quot;[image-source]&quot; alt=&quot;Image source provided by user input&quot; /&gt;</pre>
+
+        </div>
+    </div>
+</section>
+<section>
+    <div class="slide is-intro">
+        <div class="intro">
+            <h1 class="intro__headline">User Input</h1>
+            <pre class="html5" style="box-shadow: none;">image-source:<br/>https://example.com/test.jpg&quot; /&gt;<br/>&lt;script&gt;alert('Here we go!')&lt;/script&gt;<br/>&lt;img src=&quot;test.jpg</pre>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="slide is-intro">
+        <div class="intro">
+            <h1 class="intro__headline">HTML Output</h1>
+            <pre class="html5" style="box-shadow: none;">&lt;img src=&quot;https://example.com/test.jpg&quot; /&gt;
+<br>&lt;script&gt;alert('Here we go!')&lt;/script&gt;
+<br>&lt;img src=&quot;test.jpg&quot; alt=&quot;Image source provided by user input&quot; /&gt;
+            </pre>
+        </div>
+    </div>
+</section>

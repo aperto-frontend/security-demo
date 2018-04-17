@@ -1,0 +1,29 @@
+<section>
+    <div class="slide is-intro">
+        <div class="intro">
+            <h1 class="intro__headline">CSRF</h1>
+            <p class="intro__subline">Cross Site Request Forgery</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="slide is-intro">
+        <div class="intro">
+            <h1 class="intro__headline">User visits attacker.com</h1>
+            <p class="intro__subline">logged in using valid Session-Cookie from example.com</p>
+            <pre class="html5" style="box-shadow: none;">&lt;img src=&quot;//example.com/user/create?name=myname&amp;password=123&quot; alt=&quot;Get example.com account&quot; /&gt;
+            </pre>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="slide is-intro">
+        <div class="intro">
+            <h1 class="intro__headline">Countermeasure</h1>
+            <p class="intro__subline">Cookie: vulnerable to CSRF<br/>Token in request headers: vulnerable to XSS<br/>Solution: Use combination of cookie and token<br>
+                </p>
+        </div>
+    </div>
+</section>

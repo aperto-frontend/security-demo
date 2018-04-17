@@ -1,0 +1,11 @@
+<h4>Comments</h4>
+<% for (var i = 0; i < comments.length; i++) { %>
+<div>
+    <img src="<%= comments[i].image %>" width="100" alt="Comment Image" />
+    <p>Comment from <%= comments[i].user.email %></p>
+    <h5><%= comments[i].headline %></h5>
+    <p><%- comments[i].text %></p>
+    <hr/>
+</div>
+<% } %>
+<%- include ./_comment-form.ejs %>
